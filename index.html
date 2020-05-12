@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="file" />
+<button>click me</button>
+    
+</body>
+</html>
+<script>
+
+const blob = new Blob(['a', 'b', 'c']);
+// 这里生成的是一个Blob容器
+// console.log(blob);
+
+// 将Blob转化成ArrayBuffer
+const reader = new FileReader();
+reader.onload = function(res) {
+    const buf = res.target.result;
+    // 这里生成的是一个ArrayBuffer
+    // console.log(buf);
+    //需要注意的是字符串传化成二进制得到的是编码数字
+    const a = new Uint8Array(buf);
+    // console.log(a);
+    
+}
+reader.readAsArrayBuffer(blob);
+
+window.onload = function() {
+    var version = 1;
+    var request = window.indexedDB.open('file');
+    request.onsuccess = function(event) {
+        var db = event.result;
+        console.log(db.setVersion);
+    }
+    request.onerror = function(err) {
+        console.log(err);
+    }
+}
+
+
+// 将图片展示出来。
+document.querySelector('button').addEventListener('click', function() {
+    const input = document.querySelector('input').files[0];
+    const blob = new Blob([input], {type: 'image/png'});
+    // const img = document.createElement('img');
+    // img.src = window.URL.createObjectURL(blob);
+    // document.body.appendChild(img);
+    const request = window.indexedDB.open('file', 8);
+    request.onsuccess = function(e) {
+        console.log('打开数据库成功');
+        
+    }
+    request.onupgradeneeded = function(event) {
+        console.log('打开了数据库');
+        const db = event.target.result;
+        let objectStore;
+        if (!db.objectStoreNames.contains('img')) {
+            objectStore = db.createObjectStore('img', { keyPath: 'id' });
+            objectStore.createIndex('name', 'name', { unique: true });
+            objectStore.createIndex('buffer', 'buffer', { unique: false });
+        }
+        var transaction = event.target.transaction;
+        transaction.oncomplete = function() {
+            console.log('可以读写了');
+            get();
+        }
+        function add() {
+            var res = db.transaction(['img'], 'readwrite')
+            .objectStore('img')
+            .add({ id: 1, name: '图片', buffer: blob });
+            res.onsuccess = function(event) {
+                console.log('添加数据成功');
+            }
+            res.onerror = function(event) {
+                console.log('添加数据失败');
+            }
+        }
+        function get() {
+            const transaction = db.transaction(['img']);
+            const imgList = transaction.objectStore('img');
+            console.log('执行了');
+            const res = imgList.get(1);
+            res.onsuccess = function(event) {
+                console.log(event.result);
+            }
+        }
+        // get();
+    }
+}, false)
+
+
+//打开数据库
+
+
+</script>
