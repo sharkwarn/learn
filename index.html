@@ -8,7 +8,7 @@
 <body>
 <input type="file" />
 <button>click me</button>
-    
+    <img src="https://p3.pstatp.com/large/pgc-image/7073c03c446b47d2b1273638e034da4f" />
 </body>
 </html>
 <script>
@@ -29,18 +29,6 @@ reader.onload = function(res) {
     
 }
 reader.readAsArrayBuffer(blob);
-
-window.onload = function() {
-    var version = 1;
-    var request = window.indexedDB.open('file');
-    request.onsuccess = function(event) {
-        var db = event.result;
-        console.log(db.setVersion);
-    }
-    request.onerror = function(err) {
-        console.log(err);
-    }
-}
 
 
 // 将图片展示出来。

@@ -11,7 +11,9 @@ const compile = webpack({
         path: path.resolve(__dirname, '../dist/')
     },
     plugins: [
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../index.html')
+        })
     ]
 })
 
@@ -20,7 +22,7 @@ const server = new webpackDevServer(compile, {
     contentBase: path.join(__dirname, '../dist'),
     port: 5000,
     open: true,
-    hot: true
+    hot: false
 });
 
 server.listen(5000, 'localhost', () => {
