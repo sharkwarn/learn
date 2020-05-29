@@ -1,0 +1,28 @@
+{
+  "name": "mianshi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./config/start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharkwarn/learn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharkwarn/learn/issues"
+  },
+  "homepage": "https://github.com/sharkwarn/learn#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "gitbook-plugin-summary": "^1.0.0"
+  }
+}
