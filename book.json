@@ -1,0 +1,56 @@
+{
+    "title": "小五",
+    "description": "小五的gitbook",
+    "author": "zlc",
+    "language": "zh-hans",
+    "root": ".",
+    "plugins": [
+        "pageview-count",
+        "sharing-plus",
+        "back-to-top-button",
+        "code",
+        "donate",
+        "github-buttons@2.1.0",
+        "edit-link"
+    ],
+    "pluginsConfig": {
+        "donate": {
+            "button": "打赏"
+        },
+        "github-buttons": {
+            "repo": "",
+            "types": [
+                "star"
+            ],
+            "size": "small"
+        },
+        "edit-link": {
+            "base": "",
+            "label": "Edit This Page"
+        },
+        "sharing": {
+            "douban": true,
+            "facebook": true,
+            "google": true,
+            "pocket": true,
+            "qq": true,
+            "qzone": true,
+            "twitter": true,
+            "weibo": true,
+            "all": [
+                "douban",
+                "facebook",
+                "google",
+                "instapaper",
+                "linkedin",
+                "twitter",
+                "weibo",
+                "messenger",
+                "qq",
+                "qzone",
+                "viber",
+                "whatsapp"
+            ]
+        }
+    }
+}
