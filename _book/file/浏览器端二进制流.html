@@ -1,0 +1,794 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>浏览器端二进制流 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../http/http.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    浏览器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../浏览器/从输入url到渲染.html">
+            
+                <a href="../浏览器/从输入url到渲染.html">
+            
+                    
+                    从输入url到渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../css.html">
+            
+                <a href="../css.html">
+            
+                    
+                    Css
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    File
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="浏览器端二进制流.html">
+            
+                <a href="浏览器端二进制流.html">
+            
+                    
+                    浏览器端二进制流
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../http/http.html">
+            
+                <a href="../http/http.html">
+            
+                    
+                    Http
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../http/http发展历程.html">
+            
+                <a href="../http/http发展历程.html">
+            
+                    
+                    http发展历程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../js/js.html">
+            
+                <a href="../js/js.html">
+            
+                    
+                    Js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    高级程序设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../js/高级程序设计/first.html">
+            
+                <a href="../js/高级程序设计/first.html">
+            
+                    
+                    First
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    你不知道的javascript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../js/你不知道的javascript/Object.create.html">
+            
+                <a href="../js/你不知道的javascript/Object.create.html">
+            
+                    
+                    Object.create
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../js/你不知道的javascript/this.html">
+            
+                <a href="../js/你不知道的javascript/this.html">
+            
+                    
+                    This
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../js/兼容问题.html">
+            
+                <a href="../js/兼容问题.html">
+            
+                    
+                    兼容问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../js/onload和ready的区别.html">
+            
+                <a href="../js/onload和ready的区别.html">
+            
+                    
+                    onload和ready的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Mobile
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    移动端h5适配
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../mobile/移动端h5适配/">
+            
+                <a href="../mobile/移动端h5适配/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Node
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../node/脚手架问题.html">
+            
+                <a href="../node/脚手架问题.html">
+            
+                    
+                    脚手架问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    React
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../react/diff-dom.html">
+            
+                <a href="../react/diff-dom.html">
+            
+                    
+                    Diff Dom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../react/react-fiber.html">
+            
+                <a href="../react/react-fiber.html">
+            
+                    
+                    React Fiber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../react/react优化.html">
+            
+                <a href="../react/react优化.html">
+            
+                    
+                    react优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../webpack/webpack.html">
+            
+                <a href="../webpack/webpack.html">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../webpack/webpack 实战.html">
+            
+                <a href="../webpack/webpack 实战.html">
+            
+                    
+                    webpack 实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../webpack/webpack编译流程.html">
+            
+                <a href="../webpack/webpack编译流程.html">
+            
+                    
+                    webpack编译流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../安全问题.html">
+            
+                <a href="../安全问题.html">
+            
+                    
+                    安全问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../前端性能优化.html">
+            
+                <a href="../前端性能优化.html">
+            
+                    
+                    前端性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../to.html">
+            
+                <a href="../to.html">
+            
+                    
+                    To
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >浏览器端二进制流</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x4E8C;&#x8FDB;&#x5236;&#x6D41;">&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x4E8C;&#x8FDB;&#x5236;&#x6D41;</h1>
+<h2 id="&#x4E8C;&#x8FDB;&#x5236;&#x76F8;&#x5173;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;">&#x4E8C;&#x8FDB;&#x5236;&#x76F8;&#x5173;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</h2>
+<h3 id="arraybuffer--typedarray">ArrayBuffer &amp;&amp; TypedArray</h3>
+<p>ArrayBuffer&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x7684;&#x539F;&#x59CB;&#x76EE;&#x7684;&#xFF0C;&#x4E0E;webGL&#x6709;&#x5173;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x4E0E;&#x663E;&#x793A;&#x671F;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x5C31;&#x662F;&#x4EE5;&#x4E8C;&#x8FDB;&#x5236;&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x4F20;&#x8F93;&#x7684;&#x3002;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x60F3;fileAPi&#x3001;xhr&#x3001;canvas&#x7B49;&#x4E5F;&#x7528;&#x5230;&#x4E86;ArrayBuffer&#x3002;</p>
+<p>ArrayBuffer&#x4F5C;&#x4E3A;&#x5BF9;&#x8C61;&#x4EE3;&#x8868;&#x50A8;&#x5B58;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x7684;&#x4E00;&#x6BB5;&#x5185;&#x5B58;&#xFF0C;&#x5B83;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8BFB;&#x5199;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x89C6;&#x56FE;&#xFF08;TypedArray&#x89C6;&#x56FE;&#x548C;DataView&#x89C6;&#x56FE;)&#x6765;&#x8BFB;&#x5199;&#xFF0C;&#x89C6;&#x56FE;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x4EE5;&#x6307;&#x5B9A;&#x683C;&#x5F0F;&#x89E3;&#x8BFB;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x3002;ArrayBuffer&#x7B80;&#x5355;&#x8BF4;&#x662F;&#x4E00;&#x7247;&#x5185;&#x5B58;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x4E0D;&#x80FD;&#xFF08;&#x4E5F;&#x4E0D;&#x65B9;&#x4FBF;&#xFF09;&#x76F4;&#x63A5;&#x7528;&#x5B83;&#x3002;&#x8FD9;&#x5C31;&#x597D;&#x6BD4;&#x4F60;&#x5728;C&#x91CC;&#x9762;&#xFF0C;malloc&#x4E00;&#x7247;&#x5185;&#x5B58;&#x51FA;&#x6765;&#xFF0C;&#x4F60;&#x4E5F;&#x4F1A;&#x628A;&#x5B83;&#x8F6C;&#x6362;&#x6210;unsigned_int32&#x6216;&#x8005;int16&#x8FD9;&#x4E9B;&#x4F60;&#x9700;&#x8981;&#x7684;&#x5B9E;&#x9645;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x7EC4;/&#x6307;&#x9488;&#x6765;&#x7528;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x7528;&#x6765;&#x7BA1;&#x7406;ArrayBuffer&#x4E0D;&#x4F1A;&#x91C7;&#x7528;js &#x7684;array&#xFF0C;&#x7528;Array&#x6765;&#x7BA1;&#x7406;stream&#x6548;&#x7387;&#x4F4E;&#x662F;&#x56E0;&#x4E3A;Array&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#x590D;&#x6742;&#xFF0C;&#x5B83;&#x52A0;&#x4E86;&#x4E00;&#x5806;&#x7EBF;&#x6027;&#x8868;API&#xFF0C;&#x6BD4;&#x5982;push/pop/shift/unshift&#xFF0C;&#x5B83;&#x652F;&#x6301;&#x5728;&#x4E00;&#x5B9A;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6309;&#x7A00;&#x758F;&#x65B9;&#x5F0F;&#x5B58;&#x50A8;&#xFF0C;&#x603B;&#x4E4B;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#x5B83;&#x5728;&#x5B9E;&#x73B0;&#x4E0A;&#x662F;&#x727A;&#x7272;&#x4E86;&#x6027;&#x80FD;&#x7684;&#x3002;&#x4F46;&#x662F;ArrayBuffer/TypedArray&#x5C31;&#x7B80;&#x5355;&#x7684;&#x591A;&#xFF0C;&#x5B83;&#x662F;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x7A7A;&#x95F4;&#x4E0A;&#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x9884;&#x5206;&#x914D;&#x7684;&#x8FDE;&#x7EED;&#x5185;&#x5B58;&#xFF0C;TypedArray&#x8981;&#x6C42;&#x5185;&#x5B58;&#x5BF9;&#x9F50;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x5F53;&#x5BF9;&#x5B83;&#x8FDB;&#x884C;&#x8BFB;&#x5199;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x9700;&#x8981;&#x4E8C;&#x6B21;&#x5BF9;&#x9F50;&#xFF0C;&#x8FDB;&#x884C;&#x62F7;&#x8D1D;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x4F1A;&#x66F4;&#x9AD8;&#x6548;&#x3002;(<a href="https://www.zhihu.com/question/30401979/answer/48421340" target="_blank">&#x501F;&#x9274;</a>)</p>
+<h4 id="&#x770B;&#x4E0B;arraybuffertypedarraydataview-&#x7684;&#x4E3B;&#x8981;&#x7528;&#x6CD5;">&#x770B;&#x4E0B;ArrayBuffer&amp;&amp;TypedArray&amp;&amp;DataView &#x7684;&#x4E3B;&#x8981;&#x7528;&#x6CD5;</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;16&#x5B57;&#x8282;&#x7684;&#x5185;&#x5B58;&#x533A;&#x57DF;&#x3002;&#x6CE8;&#x610F;&#x548C;Array&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x6BCF;&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x5185;&#x5BB9;&#x90FD;&#x662F;0</span>
+<span class="hljs-keyword">var</span> buf = <span class="hljs-keyword">new</span> <span class="hljs-built_in">ArrayBuffer</span>(<span class="hljs-number">16</span>);
+
+<span class="hljs-comment">//DataView&#x89C6;&#x56FE;&#x7684;&#x521B;&#x5EFA;&#xFF0C;&#x9700;&#x8981;&#x63D0;&#x4F9B;ArrayBuffer&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;</span>
+<span class="hljs-keyword">var</span> dataView = <span class="hljs-keyword">new</span> <span class="hljs-built_in">DataView</span>(buf);
+
+<span class="hljs-comment">//&#x83B7;&#x53D6;&#x56DB;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x540C;&#x65F6;&#x4EE5;&#x4E0D;&#x5E26;&#x7B26;&#x53F7;&#x7684;8&#x4F4D;&#x6574;&#x6570;&#x683C;&#x5F0F;&#x8F93;&#x51FA;</span>
+dataView.getUint8(<span class="hljs-number">3</span>) <span class="hljs-comment">// 0</span>
+
+<span class="hljs-comment">// &#x5C06;buffer&#x8F6C;&#x5316;&#x6210;TypedArray&#x89C6;&#x56FE;</span>
+<span class="hljs-keyword">var</span> typedArray =  <span class="hljs-keyword">new</span> <span class="hljs-built_in">Uint8Array</span>(buf);
+<span class="hljs-comment">//&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;TypedArray&#x4E0D;&#x652F;&#x6301;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x4FEE;&#x6539;&#x3002;</span>
+</code></pre>
+<p>&#x5173;&#x4E8E;TypedArray&#x7684;&#x5177;&#x4F53;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x67E5;&#x770B;
+<a href="https://javascript.ruanyifeng.com/stdlib/arraybuffer.html" target="_blank">https://javascript.ruanyifeng.com/stdlib/arraybuffer.html</a></p>
+<h2 id="blob">Blob</h2>
+<p>&#x5728;html5&#x548C;MYSQL&#x4E2D;Blob&#x5728;&#x6982;&#x5FF5;&#x4E0A;&#x8FD8;&#x662F;&#x6709;&#x4E9B;&#x533A;&#x522B;&#x7684;&#xFF0C;MYSQL&#x4E2D;&#x7684;BLOB&#x7C7B;&#x578B;&#x5C31;&#x53EA;&#x662F;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x5BB9;&#x5668;&#xFF0C;&#x4F46;&#x662F;&#x5728;html5&#x4E2D;Blob&#x8FD8;&#x652F;&#x6301;&#x8BBE;&#x7F6E;MIME&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> aFileParts = [<span class="hljs-string">&apos;&lt;a id=&quot;a&quot;&gt;&lt;b id=&quot;b&quot;&gt;hey!&lt;/b&gt;&lt;/a&gt;&apos;</span>]; <span class="hljs-comment">// &#x4E00;&#x4E2A;&#x5305;&#x542B;DOMString&#x7684;&#x6570;&#x7EC4;</span>
+<span class="hljs-keyword">var</span> oMyBlob = <span class="hljs-keyword">new</span> Blob(aFileParts, {type : <span class="hljs-string">&apos;text/html&apos;</span>}); <span class="hljs-comment">// &#x5F97;&#x5230; blob</span>
+</code></pre>
+<p>&#x64CD;&#x4F5C;Bolb&#x8981;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;FileReader&#x3002;</p>
+<p>FileReader &#x6709;&#x4E00;&#x4E0B;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#x5C06;Blob &#x8F6C;&#x5316;&#x4E3A;&#x5176;&#x5B83;&#x6570;&#x636E;</p>
+<ul>
+<li>FileReader.prototype.readAsArrayBuffer// &#x53EF;&#x4EE5;&#x5C06;&#x5185;&#x5BB9;&#x8F6C;&#x5316;&#x6210;ArrayBuffer</li>
+<li>FileReader.prototype.readAsText// &#x53EF;&#x4EE5;&#x5C06;&#x5185;&#x5BB9;&#x8F6C;&#x5316;&#x6210;&#x6587;&#x672C;&#x8F93;&#x51FA;</li>
+<li>FileReader.prototype.readAsDataURL// &#x5C06;&#x5185;&#x5BB9;&#x8F6C;&#x5316;&#x6210;base64 </li>
+<li>FileReader.prototype.readAsBinaryString// &#x8F6C;&#x5316;&#x6210;&#x539F;&#x59CB;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x8F93;&#x51FA;</li>
+</ul>
+<h4 id="&#x5173;&#x4E8E;filereader&#x7684;&#x7528;&#x6CD5;">&#x5173;&#x4E8E;FileReader&#x7684;&#x7528;&#x6CD5;</h4>
+<p>&#x5BF9;&#x8C61;&#x5141;&#x8BB8;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5F02;&#x6B65;&#x8BFB;&#x53D6;&#x5B58;&#x50A8;&#x5728;&#x7528;&#x6237;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x7684;&#x6587;&#x4EF6;&#xFF08;&#x6216;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7F13;&#x51B2;&#x533A;&#xFF09;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F7F;&#x7528; File &#x6216; Blob &#x5BF9;&#x8C61;&#x6307;&#x5B9A;&#x8981;&#x8BFB;&#x53D6;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6570;&#x636E;&#x3002;</p>
+<p>File&#x6587;&#x4EF6;&#x6307;&#x7684;&#x662F;&#x901A;&#x8FC7;input[type=file]&#x9009;&#x62E9;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p>Blob &#x6307;&#x7684;&#x662F;Blob&#x5BF9;&#x8C61;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x8BFB;&#x53D6;&#x6587;&#x4EF6;</span>
+<span class="hljs-keyword">const</span> input = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;input&apos;</span>).files[<span class="hljs-number">0</span>];
+<span class="hljs-keyword">const</span> reader = <span class="hljs-keyword">new</span> FileReader();
+reader.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-comment">// &#x6B64;&#x5904;&#x8F93;&#x51FA;&#x7684;&#x5185;&#x5BB9;&#x6839;&#x636E;reader&#x7684;&#x8BFB;&#x53D6;&#x65B9;&#x5F0F;&#x6765;&#x51B3;&#x5B9A;</span>
+    <span class="hljs-built_in">console</span>.log(e.target.result)
+    <span class="hljs-comment">// &#x8F93;&#x51FA;base64</span>
+}
+reader.readAsDataURL(input);
+
+<span class="hljs-keyword">const</span> blob = <span class="hljs-keyword">new</span> Blob([<span class="hljs-string">&apos;&lt;a id=&quot;a&quot;&gt;&lt;b id=&quot;b&quot;&gt;hey!&lt;/b&gt;&lt;/a&gt;&apos;</span>], {type : <span class="hljs-string">&apos;text/html&apos;</span>});
+<span class="hljs-keyword">const</span> reader2 = <span class="hljs-keyword">new</span> FileReader();
+reader2.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(e.target.result);
+}
+reader2.readAsText(blob);
+<span class="hljs-comment">// &#x8F93;&#x51FA; &lt;a id=&quot;a&quot;&gt;&lt;b id=&quot;b&quot;&gt;hey!&lt;/b&gt;&lt;/a&gt;</span>
+</code></pre>
+<h3 id="&#x4E3E;&#x4F8B;&#x5C06;&#x56FE;&#x7247;&#x8F6C;&#x5316;&#x6210;base64">&#x4E3E;&#x4F8B;&#x5C06;&#x56FE;&#x7247;&#x8F6C;&#x5316;&#x6210;base64</h3>
+<ul>
+<li>&#x65B9;&#x6CD5;&#x4E00; &#x901A;&#x8FC7;canvas</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> img = <span class="hljs-keyword">new</span> Image();
+<span class="hljs-comment">// &#x4E0D;&#x8BBE;&#x7F6E;&#x7684;&#x8BDD;&#x4F1A;&#x51FA;&#x73B0;&#x8DE8;&#x57DF;&#x95EE;&#x9898;&#x3002;</span>
+img.crossOrigin = <span class="hljs-string">&apos;Anonymous&apos;</span>;
+img.src = <span class="hljs-string">&apos;https://p3.pstatp.com/large/pgc-image/7073c03c446b47d2b1273638e034da4f&apos;</span>;
+img.addEventListener(<span class="hljs-string">&apos;load&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&apos;</span>);
+    <span class="hljs-keyword">var</span> canvas = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;canvas&apos;</span>);
+    <span class="hljs-keyword">var</span> ctx = canvas.getContext(<span class="hljs-string">&apos;2d&apos;</span>);
+    ctx.drawImage(<span class="hljs-keyword">this</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-comment">// &#x8FD9;&#x4E00;&#x6B65;&#x8F6C;&#x5316;&#x6210;&#x4E86;base64</span>
+    <span class="hljs-keyword">const</span> a = canvas.toDataURL();
+    <span class="hljs-built_in">console</span>.log(a);
+    <span class="hljs-keyword">const</span> img = <span class="hljs-keyword">new</span> Image();
+    img.src = a;
+    <span class="hljs-built_in">document</span>.body.appendChild(img);
+})
+</code></pre>
+<ul>
+<li>&#x65B9;&#x6CD5;&#x4E8C; &#x901A;&#x8FC7;Blob<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest();
+xhr.responseType = <span class="hljs-string">&apos;blob&apos;</span>;
+xhr.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">//&#x8FD9;&#x91CC;&#x5F97;&#x5230;&#x7684;&#x662F;Blob&#x5BF9;&#x8C61;</span>
+  <span class="hljs-keyword">const</span> reader = <span class="hljs-keyword">new</span> FileReader();
+  reader.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+      <span class="hljs-keyword">const</span> img = <span class="hljs-keyword">new</span> Image();
+      img.src = res.target.result;
+      <span class="hljs-built_in">document</span>.body.appendChild(img);
+  }
+  reader.readAsDataURL(xhr.response)
+}
+xhr.open(<span class="hljs-string">&apos;GET&apos;</span>, <span class="hljs-string">&apos;https://p3.pstatp.com/large/pgc-image/7073c03c446b47d2b1273638e034da4f&apos;</span>);
+xhr.send();
+</code></pre>
+</li>
+</ul>
+<p>&#x5982;&#x679C;&#x53EA;&#x662F;&#x60F3;&#x628A;&#x56FE;&#x7247;&#x5C55;&#x793A;&#x5230;&#x9875;&#x9762;&#x4E0A;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;FileReader</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest();
+xhr.responseType = <span class="hljs-string">&apos;blob&apos;</span>;
+xhr.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">//&#x8FD9;&#x91CC;&#x5F97;&#x5230;&#x7684;&#x662F;Blob&#x5BF9;&#x8C61;</span>
+    <span class="hljs-keyword">const</span> img = <span class="hljs-keyword">new</span> Image();
+    img.src = URL.createObjectURL(xhr.response);
+    <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x5F97;&#x5230;&#x7684;&#x662F;&#x4E00;&#x4E2A;blob&#x7684;url</span>
+    <span class="hljs-built_in">document</span>.body.appendChild(img);
+}
+xhr.open(<span class="hljs-string">&apos;GET&apos;</span>, <span class="hljs-string">&apos;https://p3.pstatp.com/large/pgc-image/7073c03c446b47d2b1273638e034da4f&apos;</span>);
+xhr.send();
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="../http/http.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Http">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"浏览器端二进制流","level":"1.4.1","depth":2,"next":{"title":"Http","level":"1.5","depth":1,"path":"http/http.md","ref":"http/http.md","articles":[{"title":"http发展历程","level":"1.5.1","depth":2,"path":"http/http发展历程.md","ref":"http/http发展历程.md","articles":[]}]},"previous":{"title":"File","level":"1.4","depth":1,"ref":"","articles":[{"title":"浏览器端二进制流","level":"1.4.1","depth":2,"path":"file/浏览器端二进制流.md","ref":"file/浏览器端二进制流.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"file/浏览器端二进制流.md","mtime":"2020-05-12T12:07:06.529Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-29T01:21:46.286Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
