@@ -14,6 +14,7 @@
     * [Object.create](js/你不知道的javascript/Object.create.md)
     * [This](js/你不知道的javascript/this.md)
   * [兼容问题](js/兼容问题.md)
+  * [js继承的方式](js/js继承的方式.md)
   * [onload和ready的区别](js/onload和ready的区别.md)
 - Mobile
   - 移动端h5适配
@@ -29,4 +30,3 @@
   * [webpack编译流程](webpack/webpack编译流程.md)
 * [安全问题](安全问题.md)
 * [前端性能优化](前端性能优化.md)
-* [To](to.md)
