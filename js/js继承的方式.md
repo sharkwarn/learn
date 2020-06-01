@@ -130,6 +130,8 @@ function object(o) {
 
 ## 寄生式继承
 
+寄生组合式继承的基本思想是为了解决组合继承的缺点，组合继承调用了两次父构造函数，生成了两个实例属性，只不过实例上的覆盖了原型上的属性。用了寄生式继承的方法，将子类原型指向父类原型，一般是Object.create() 与 Object.setPrototype()
+
 ```javascript
 function Parent(type) {
     this.type = type;
@@ -145,12 +147,13 @@ function Child(name, type) {
 }
 
 // 继承方法
-Child.prototype = new Parent();
+Child.prototype = Object.create(Parent.prototype);
 Child.prototype.constructor = Child;
 const a = new Child('a', 1);
 ```
-完美的继承
 
+
+- 缺点: 感觉还是父类原型中的引用类型值会被所有下面的实例共享，一个改变，其它都变了，，
 
 ## class
 简单易懂
