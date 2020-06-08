@@ -6,7 +6,6 @@
     "root": ".",
     "plugins": [
         "pageview-count",
-        "sharing-plus",
         "back-to-top-button",
         "code",
         "donate",
@@ -26,31 +25,7 @@
         },
         "edit-link": {
             "base": "",
-            "label": "Edit This Page"
-        },
-        "sharing": {
-            "douban": true,
-            "facebook": true,
-            "google": true,
-            "pocket": true,
-            "qq": true,
-            "qzone": true,
-            "twitter": true,
-            "weibo": true,
-            "all": [
-                "douban",
-                "facebook",
-                "google",
-                "instapaper",
-                "linkedin",
-                "twitter",
-                "weibo",
-                "messenger",
-                "qq",
-                "qzone",
-                "viber",
-                "whatsapp"
-            ]
+            "label": ""
         }
     }
 }
