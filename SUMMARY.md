@@ -1,4 +1,5 @@
 # 小五
+
 - 浏览器
   * [从输入url到渲染](浏览器/从输入url到渲染.md)
 * [Css](css.md)
@@ -14,6 +15,8 @@
     * [This](js/你不知道的javascript/this.md)
   * [兼容问题](js/兼容问题.md)
   * [快速和冒泡排序](js/快速和冒泡排序.md)
+  * [历年es新增语法](js/历年es新增语法.md)
+  * [线程和进程的区别](js/线程和进程的区别.md)
   * [apply&bind&clone的实现](js/apply&bind&clone的实现.md)
   * [js继承的方式](js/js继承的方式.md)
   * [onload和ready的区别](js/onload和ready的区别.md)
@@ -22,6 +25,7 @@
     * [Index](mobile/移动端h5适配/index.md)
 - Node
   * [脚手架问题](node/脚手架问题.md)
+  * [node特点](node/node特点.md)
 - React
   * [常见问题整理](react/常见问题整理.md)
   * [Diff Dom](react/diff-dom.md)
@@ -29,6 +33,8 @@
   * [react优化](react/react优化.md)
   * [redux和mobx对比](react/redux和mobx对比.md)
   * [Thunk Saga](react/thunk&saga.md)
+- Ts
+  * [注意](ts/注意.md)
 - [Webpack](webpack/webpack.md)
   * [webpack 实战](webpack/webpack 实战.md)
   * [webpack编译流程](webpack/webpack编译流程.md)
