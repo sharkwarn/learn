@@ -20,6 +20,7 @@
   * [apply&bind&clone的实现](js/apply&bind&clone的实现.md)
   * [js继承的方式](js/js继承的方式.md)
   * [onload和ready的区别](js/onload和ready的区别.md)
+  * [js常用的设计模式](js/常用设计模式.md)
 - Mobile
   - 移动端h5适配
     * [Index](mobile/移动端h5适配/index.md)
