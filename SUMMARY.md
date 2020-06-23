@@ -3,9 +3,13 @@
 - 浏览器
   * [从输入url到渲染](浏览器/从输入url到渲染.md)
 * [Css](css.md)
+- Es 6
+  * [for in 和 for of的区别](es6/for in 和 for of的区别.md)
+  * [Iterator](es6/Iterator.md)
 - File
   * [浏览器端二进制流](file/浏览器端二进制流.md)
 - [Http](http/http.md)
+  * [缓存](http/缓存.md)
   * [http发展历程](http/http发展历程.md)
 - [Js](js/js.md)
   - 高级程序设计
@@ -13,6 +17,7 @@
   - 你不知道的javascript
     * [Object.create](js/你不知道的javascript/Object.create.md)
     * [This](js/你不知道的javascript/this.md)
+  * [常用设计模式](js/常用设计模式.md)
   * [兼容问题](js/兼容问题.md)
   * [快速和冒泡排序](js/快速和冒泡排序.md)
   * [历年es新增语法](js/历年es新增语法.md)
@@ -20,16 +25,19 @@
   * [apply&bind&clone的实现](js/apply&bind&clone的实现.md)
   * [js继承的方式](js/js继承的方式.md)
   * [onload和ready的区别](js/onload和ready的区别.md)
-  * [js常用的设计模式](js/常用设计模式.md)
 - Mobile
   - 移动端h5适配
     * [Index](mobile/移动端h5适配/index.md)
 - Node
   * [脚手架问题](node/脚手架问题.md)
+  * [cmd和es6 module的区别](node/cmd和es6 module的区别.md)
+  * [Event Loop](node/event loop.md)
   * [node特点](node/node特点.md)
+  * [treesharking原理](node/treesharking原理.md)
 - React
   * [常见问题整理](react/常见问题整理.md)
   * [Diff Dom](react/diff-dom.md)
+  * [Hook Memo](react/hook memo.md)
   * [React Fiber](react/react-fiber.md)
   * [react优化](react/react优化.md)
   * [redux和mobx对比](react/redux和mobx对比.md)
