@@ -191,64 +191,6 @@ host域（设置虚拟站点，也就是说，web server上的多个虚拟站点
 
 
 
-
-## 可能缓存性
-
-### public  // 可以在任意地方进行缓存，客户端或者搭理服务器
-
-### private // 只允许浏览器缓存
-
-### no-cache // 客户端不进行缓存
-
-## 到期
-
-### max-age = <seconds> 客户端
-
-### s-maxage = <seconds> 代理服务器
-
-### max-stale = <seconds> 
-
-在发起方如果max-age，已经过期了，发起方并携带这个参数，超出max-age中也可以储存,只可以在请求中设置，在相应中设置无效。
-
-## 重新验证
-
-### must-revalidate 
-
-### proxy-revalidate 代理服务器缓存
-
-## 其他
-
-### no-store 彻底不缓存
-
-### no-transform 有些proxy服务器会改变文件
-
-
-
-## 验证头
-
-
-### Last-Modified
-
-上次修改时间
-
-配合If-Modified-Since 或者 If-Unmodified-Since使用
-
-对比上次修改时间
-
-+ 缺点，
-    + last-Modified的时间单位是秒，一会内两次改变文件可能无效。
-    + 打开文件不修改也会改变时间。
-
- ### Etag
-
- 数据签名
-
- 配合If-Match或者If-Non-Match使用
-
- 对比数据签名判断是否使用缓存
-
-
-
  ## Cookie 和 Session
 
  max-age & expires(需要设置一个具体时间) 设置过期时间
