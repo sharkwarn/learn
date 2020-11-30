@@ -51,6 +51,8 @@
   * [Thunk Saga](react/thunk&saga.md)
 - Ts
   * [注意](ts/注意.md)
+- mysql
+  * [mysql常用指令](mysql/数据库指令.md)
 - [Webpack](webpack/webpack.md)
   * [webpack 实战](webpack/webpack 实战.md)
   * [webpack编译流程](webpack/webpack编译流程.md)
