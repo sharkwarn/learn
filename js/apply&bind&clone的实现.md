@@ -22,7 +22,6 @@ Function.prototype.myApply = function(context, ...arg) {
     }
 
     let fn = Symbol();
-    // let fn = Math.random() * 1000  + '';
     context[fn] = this;
     const res = context[fn](...arg);
     return res;
