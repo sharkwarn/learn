@@ -77,3 +77,71 @@ scheduler会根据当前主线程的使用情况去处理这次update。为了�
 
 
 借鉴：https://juejin.im/post/5ab7b3a2f265da2378403e57
+
+
+## 常问问题和解析
+
+### diff 过程中被打断后是怎么重新开始的
+
+答： 之前diff的过程是一个普通的递归，依赖调用栈，这种方式被打断后很难恢复，且不利于异步操作。
+
+所以react对这个diff的数据结构进行改造。改造成一个链表。每个链表节点就是一个fiber单元，节点上也保存着，父节点、子节点、兄弟节点等信息。
+
+浏览器执行diff完当前节点的信息后，先判断是否有剩余时间。如果有的话，继续diff下一个节点,如果没有的话，保存下一个节点。等浏览器有空余时间后，拿到这个节点继续上面的操作。
+
+
+
+判断是否有剩余时间
+
+```js
+window.requestIdleCallback(function (e) {
+    console.log(e.timeRemaining());
+    while (true) {
+        const timeEnd = e.timeRemaining();
+        if (timeEnd <= 0) {
+            // 没有预留时间了，记录下当前节点。退出任务
+            break;
+        } else {
+            // 继续任务
+        }
+    }
+    console.log(e.timeRemaining());
+}, {
+    timeout: 1000// 防止饿死，设置最长等待时间。
+});
+```
+
+requestIdleCallback 只有chrome支持，所以它利用MessageChannel 模拟将回调延迟到'绘制操作'之后执行:
+
+
+
+### 渲染的过程
+
+每次渲染都分为两个阶段，Reconciliation(协调阶段) 和 Commit(提交阶段).
+
+⚛️ 协调阶段: 可以认为是 Diff 阶段, 这个阶段可以被中断, 这个阶段会找出所有节点变更，例如节点新增、删除、属性变更等等, 这些变更React 称之为'副作用(Effect)' . 以下生命周期钩子会在协调阶段被调用
+
+- constructor
+- componentWillMount 废弃
+- componentWillReceiveProps 废弃
+- static getDerivedStateFromProps
+- shouldComponentUpdate
+- componentWillUpdate 废弃
+- render
+
+提交阶段: 将上一个阶段计算出来的需要处理的**副作用(Effects)**一次性执行了。这个阶段必须同步执行，不能被打断. 这些生命周期钩子在提交阶段被执行:
+
+- getSnapshotBeforeUpdate() 严格来说，这个是在进入 commit 阶段前调用
+- componentDidMount
+- componentDidUpdate
+- componentWillUnmount
+
+也就是说，在协调阶段如果时间片用完，React就会选择让出控制权。因为协调阶段执行的工作不会导致任何用户可见的变更，所以在这个阶段让出控制权不会有什么问题。
+需要注意的是：因为协调阶段可能被中断、恢复，甚至重做，⚠️React 协调阶段的生命周期钩子可能会被调用多次!, 例如 componentWillMount 可能会被调用两次。
+因此建议 协调阶段的生命周期钩子不要包含副作用. 索性 React 就废弃了这部分可能包含副作用的生命周期方法，例如componentWillMount、componentWillUpdate. v17后我们就不能再用它们了, 所以现有的应用应该尽快迁移.
+
+
+
+Reconciliation过程中会构建一颗新的树，官方称为workInProgress tree，WIP树),可以认为是一颗表示当前工作进度的树。还有一颗表示已渲染界面的旧树，React就是一边和旧树比对，一边构建WIP树的。 alternate 指向旧树的同等节点。对于需要变更的节点，都打上了'标签'。 在提交阶段，React 就会将这些打上标签的节点应用变更。
+
+

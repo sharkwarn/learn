@@ -168,7 +168,7 @@ host域（设置虚拟站点，也就是说，web server上的多个虚拟站点
 
 
 
-## 浏览器渲染原理及流程 DOM -> CSSOM -> render -> layout -> print
+## 浏览器渲染原理及流程 DOM -> CSSOM -> render -> layout -> paint
 
 
 
