@@ -36,6 +36,6 @@ const server = new webpackDevServer(compile, {
 
 server.listen(5000, 'localhost', () => {
     console.log('dev server listening on port 5000');
-  });
+});
   
 

@@ -109,7 +109,6 @@ function /* a comment */ foo() {}
 ```javascript
 class Message {
  #message = "Howdy"
-
  greet() { console.log(this.#message) }
 }
 
